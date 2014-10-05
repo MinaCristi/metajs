@@ -6,44 +6,43 @@ parts of code**.
 
 ### Knowledge-oriented programming language
 
-MetaJS is yet another attempt to create better programming language for modern
-world. More about MetaJS background, why it was chosen Lisp-syntax and why it's
-compiled to Javascript, you can find on
+MetaJS is an attempt to create a programming language that is better equipt for modern
+world. You can find out more about the background of MetaJS, why it uses a Lisp-syntax, and why it's
+compiled to Javascript, at
 [coect.net/metajs/](http://www.coect.net/metajs/). Project Coect aims to replace
 outdated Email and XMPP with modern [universal communication
 protocol](http://www.coect.net/).
 
 MetaJS for Coect plays the same role as Emacs Lisp for Emacs. MetaJS is written
 in MetaJS and can recompile itself. Look at the [interactive
-MetaJS-documentation](http://metajs.coect.net/) where you can try MetaJS without
-leaving your browser.
+MetaJS-documentation](http://metajs.coect.net/) where you can try MetaJS interactively inside your browser.
 
-Knowledge-oriented programming as opposed to object-oriented or functional one gives
+Knowledge-oriented programming, as opposed to object-oriented or functional programming, gives
 main priority to semantic models of the program instead of building blocks of
-the program (objects or functions). Each semantic model (in the form that
+the program (objects or functions). Each semantic model (in a form that
 compiler can understand) is called [logos](http://en.wikipedia.org/wiki/Logos).
 
 You can find more information about semantic code transformations, examples of
-symbolic and entitative MetaJS to JavaScipt transformations in the [metajs_semantic_code_transformations.pdf](http://metajs.coect.net/pdf/metajs_semantic_code_transformations.pdf).
-Please look also at the high-level MetaJS language overview [metajs_lisp.pdf](http://metajs.coect.net/pdf/metajs_lisp.pdf).
+symbolic, and entitative MetaJS to JavaScipt transformations in the [metajs_semantic_code_transformations.pdf](http://metajs.coect.net/pdf/metajs_semantic_code_transformations.pdf).
+Please also look at the high-level MetaJS language overview [metajs_lisp.pdf](http://metajs.coect.net/pdf/metajs_lisp.pdf).
 
 ### Seamless integration with Javascript
 
-MetaJS is compiled to Javascript code without runtime dependencies and don't use
-own datastructures (like for example ClojureScript does). MetaJS uses native
-Javascript's arrays as lists and so can perform in any Javascript environment
-without unnecessary overhead. JSON documents are valid MetaJS documents and so
-can be included with usual `include`. MetaJS tries to generate beautiful
+MetaJS is compiled to Javascript code without runtime dependencies and doesn' use its
+own datastructures (like ClojureScript does, for instance). MetaJS uses native
+Javascript arrays as lists, so it can perform in any Javascript environment
+without unnecessary overhead. JSON documents are valid MetaJS documents and
+can be included with the usual `include`. MetaJS tries to generate beautiful
 javascript code that passes JSHint without warnings. The generated code is
 compatible with [EcmaScript5](http://kangax.github.io/es5-compat-table/). For
-legacy browsers like IE8 it should be used
+legacy browsers like IE8 it should be used with
 [es5-shim](https://github.com/kriskowal/es5-shim/) or other
 [polyfill](http://remysharp.com/2010/10/08/what-is-a-polyfill/).
 
-MetaJS is implemented in MetaJS and you can extend language easily by adding new
-macros. For example, to add support of `yield` keyword introduced in
+MetaJS is implemented in MetaJS and you can extend this language easily by adding new
+macros. For example, to add support for the `yield` keyword, which was introduced in
 [Javascript 1.7](https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/1.7)
-just create a macro like:
+just create a macro like the one below:
 
 ```lisp
 (defmacro yield (x)
@@ -63,9 +62,9 @@ MetaJS supports destructuring across all forms that accept name-value bindings:
   (set [one two three] digits))
 ```
 
-Forms can be chained with well-known `->` macro. For chaining methods calls often
+Forms can be chained with the well-known `->` macro. There is a special method based on method-hooks for chaining method calls often
 used in javascript libraries like [jQuery](http://jquery.com/) or
-[D3](http://d3js.org/) there is also special syntax based on method hooks. For
+[D3](http://d3js.org/). For
 example let's look at following [code-sample](http://d3js.org/#transitions) from
 D3 homepage:
 
