@@ -28,9 +28,9 @@ Please also look at the high-level MetaJS language overview [metajs_lisp.pdf](ht
 
 ### Seamless integration with Javascript
 
-MetaJS is compiled to Javascript code without runtime dependencies and doesn' use its
+MetaJS is compiled to Javascript code without runtime dependencies and doesn't use its
 own datastructures (like ClojureScript does, for instance). MetaJS uses native
-Javascript arrays as lists, so it can perform in any Javascript environment
+Javascript arrays and lists, so it can perform in any Javascript environment
 without unnecessary overhead. JSON documents are valid MetaJS documents and
 can be included with the usual `include`. MetaJS tries to generate beautiful
 javascript code that passes JSHint without warnings. The generated code is
@@ -42,6 +42,8 @@ legacy browsers like IE8 it should be used with
 MetaJS is implemented in MetaJS and you can extend this language easily by adding new
 macros. For example, to add support for the `yield` keyword, which was introduced in
 [Javascript 1.7](https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/1.7)
+
+
 just create a macro like the one below:
 
 ```lisp

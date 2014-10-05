@@ -11,7 +11,7 @@
     "compiler",
     "magic"
   ],
-  "description": "Write on Lisp. Compile to Javascript. Can guess thoughts and generate missed code.",
+  "description": "Write in Lisp. Compile to Javascript. Knowledge oriented prgamming that anticipates function and generates missed code.",
   "license" : "MIT",
   "contributors": {
     "name": "Dmytro V. Dogadailo",
