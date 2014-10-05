@@ -1,7 +1,7 @@
 # (: MetaJS)
 
-Write on **lisp**. Compile to pure **javascript** without runtime dependencies.
-Enjoy compiler that can **guess your thoughts** and **generate intentionally missed
+Write in **lisp**. Compile to pure **javascript** without runtime dependencies.
+Enjoy a compiler that can **guess your thoughts** and **generate intentionally missed
 parts of code**.
 
 ### Knowledge-oriented programming language
